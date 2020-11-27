@@ -1,0 +1,30 @@
+{
+    "version": "2.0.0",
+   
+    "tasks": [
+        {
+            "type": "shell",
+            "label": "g++.exe build active file",
+            "command": "C:\\mingw\\mingw64\\bin\\g++.exe",
+            "presentation": {"clear": true, "reveal": "always", "panel": "new"},
+            "args": [
+                "-g",
+                "--std=c++11",
+                "${workspaceFolder}\\*.cpp",
+                "-o",
+                "${fileDirname}\\${workspaceFolderBasename}.exe",
+                "-I${workspaceFolder}/../include"
+            ],
+            "options": {
+                "cwd": "C:\\mingw\\mingw64\\bin"
+            },
+            "problemMatcher": [
+                "$gcc"
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            }
+        }
+    ]
+}
